@@ -25,6 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: echo $ANDROID_KEYSTORE_ALIAS
+    - run: set
     - run: which aidl
     - run: which aapt
     - run: which zipalign
@@ -32,5 +33,5 @@ jobs:
     - run: which d8
     - run: which keytool
     - run: javac -version
-    - run: set
+    
 
