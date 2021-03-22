@@ -11,7 +11,7 @@ const BUILD_FOLDER = 'build'
 // const SETTINGS_FILE = 'andy.json'
 
 // external commands
-const ANDROID_SDK_PATH = 'G:/programs/adev/sdk'
+const ANDROID_SDK_PATH = process.env.ANDROID_SDK_ROOT; // 'G:/programs/adev/sdk'
 const BUILD_TOOLS_VERSION = '28.0.3'
 const PLATFORM_VERSION = '28'
 const MINIMUM_SDK_VERSION = '10'

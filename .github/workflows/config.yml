@@ -26,12 +26,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: echo "$ANDROID_KEYSTORE_ALIAS"
     - run: set
-    - run: which aidl
-    - run: which aapt
-    - run: which zipalign
-    - run: which apksigner
-    - run: which d8
-    - run: which keytool
+    - run: ls $ANDROID_SDK_ROOT/
+    - run: ls $ANDROID_SDK_ROOT/build-tools/
+    - run: pwd
+    - run: ls ./
     - run: javac -version
+    - run: node andy.js compile -c
+
     
 
