@@ -1,0 +1,36 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    env:
+      CI: true
+      ANDROID_KEYSTORE_PASS: ${{ secrets.ANDROID_KEYSTORE_PASS }}
+      ANDROID_KEYSTORE_ALIAS: ${{ secrets.ANDROID_KEYSTORE_ALIAS }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: echo $ANDROID_KEYSTORE_ALIAS
+    - run: which aidl
+    - run: which aapt
+    - run: which zipalign
+    - run: which apksigner
+    - run: which d8
+    - run: which keytool
+    - run: javac -version
+    - run: set
+
