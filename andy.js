@@ -72,7 +72,7 @@ const JAVAC_OPTIONS = (
 
 const DX_OPTIONS = (' --min-api ' + MINIMUM_SDK_VERSION + ' --lib $PLATFORM_LIB' +
   //  ' $SUPPORT_LIB' +
-  ' --output=$PROJ/' + BUILD_FOLDER + '/ ')
+  ' --output $PROJ/' + BUILD_FOLDER + '/ ')
   .replace('$PLATFORM_LIB', PLATFORM_LIB)
 
 const AAPT_GEN_APK_OPTIONS1 =
