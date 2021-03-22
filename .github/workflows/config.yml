@@ -29,13 +29,11 @@ jobs:
       with:
         java-version: 1.8
 
-    - run: echo "$ANDROID_KEYSTORE_ALIAS"
-    - run: set
-    - run: ls $ANDROID_SDK_ROOT/
-    - run: ls $ANDROID_SDK_ROOT/build-tools/
-    - run: pwd
-    - run: javac -help
     - run: node andy.js compile -c
 
+    - uses: actions/upload-artifact@v2
+      with:
+        name: android-apk
+        path: build/android-basix-musicplayer-debug.apk
     
 
