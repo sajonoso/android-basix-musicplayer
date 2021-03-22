@@ -1,5 +1,8 @@
 // ANDY v2.0 - no build system
 
+// INFO
+// https://authmane512.medium.com/how-to-build-an-apk-from-command-line-without-ide-7260e1e22676
+
 const fs = require('fs')
 const path = require('path')
 const execSync = require('child_process').execSync;
@@ -59,7 +62,7 @@ const JAVAC_SUPPORTLIB = ' -cp ' + ANDROID_SUPPORT_LIB_V4 +
   ' -cp ' + ANDROID_SUPPORT_LIB_V13;
 
 const JAVAC_OPTIONS = (
-  ' -d $PROJ/' + BUILD_FOLDER + ' -bootclasspath $PLATFORM_LIB' +
+  ' -d $PROJ/' + BUILD_FOLDER + ' -cp $PLATFORM_LIB' +
   ' -cp src/* -cp $PLATFORM_PATH/*' +
   ' -cp $BUILD_TOOLS_PATH/*' +
   '$SUPPORT_LIB' +
