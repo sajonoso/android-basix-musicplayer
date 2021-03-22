@@ -505,7 +505,7 @@ function processOptions(fs, path) {
 
 function cleanBuild() {
   try {
-    showRun(execSync, 'rmdir /S /Q ' + BUILD_FOLDER)
+    showRun(execSync, 'rm -rf ' + BUILD_FOLDER)
   } catch (e) { }
   showRun(execSync, 'mkdir ' + BUILD_FOLDER)
 }
