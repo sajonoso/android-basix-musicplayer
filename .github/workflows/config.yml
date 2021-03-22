@@ -34,8 +34,7 @@ jobs:
     - run: ls $ANDROID_SDK_ROOT/
     - run: ls $ANDROID_SDK_ROOT/build-tools/
     - run: pwd
-    - run: ls ./
-    - run: javac -version
+    - run: javac -help
     - run: node andy.js compile -c
 
     

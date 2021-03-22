@@ -62,9 +62,7 @@ const JAVAC_SUPPORTLIB = ' -cp ' + ANDROID_SUPPORT_LIB_V4 +
   ' -cp ' + ANDROID_SUPPORT_LIB_V13;
 
 const JAVAC_OPTIONS = (
-  ' -d $PROJ/' + BUILD_FOLDER + ' -cp $PLATFORM_LIB' +
-  ' -cp src/* -cp $PLATFORM_PATH/*' +
-  ' -cp $BUILD_TOOLS_PATH/*' +
+  ' -d $PROJ/' + BUILD_FOLDER + ' -classpath $PLATFORM_LIB:src/*:$PLATFORM_PATH/*:$BUILD_TOOLS_PATH/*' +
   '$SUPPORT_LIB' +
   ' -source 1.8 -target 1.8') // $SOURCE_JAVA
   .replace(/\$PLATFORM_PATH/g, PLATFORM_PATH)
