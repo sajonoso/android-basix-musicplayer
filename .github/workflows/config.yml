@@ -29,6 +29,9 @@ jobs:
       with:
         java-version: 1.8
 
+    - run: curl -O https://raw.githubusercontent.com/sajonoso/android-builder/master/andy.js
+    - run: curl -O https://raw.githubusercontent.com/sajonoso/android-builder/master/andy-debug.jks
+    
     - run: node andy.js compile -c
 
     - uses: actions/upload-artifact@v2
